@@ -275,7 +275,7 @@
       <div class="code-body">
         <div><span class="c-cm"># ── Profile ──────────────</span></div>
         <div><span class="c-kw">class</span> <span class="c-fn">Developer</span>:</div>
-        <div>&nbsp;&nbsp;<span class="c-key">name</span>     = <span class="c-str">"Your Name"</span></div>
+        <div>&nbsp;&nbsp;<span class="c-key">name</span>     = <span class="c-str">"DINESH"</span></div>
         <div>&nbsp;&nbsp;<span class="c-key">stack</span>    = [</div>
         <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"Python"</span>, <span class="c-str">"Java"</span>,</div>
         <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"Git and Github"</span>, <span class="c-str">"JavaScript"</span>,</div>
@@ -691,6 +691,24 @@
 
   document.addEventListener('mouseleave',()=>dot.style.opacity='0');
   document.addEventListener('mouseenter',()=>dot.style.opacity='1');
+  const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach((el) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+// Initial call
+revealOnScroll();
 </script>
 </body>
 </html>
